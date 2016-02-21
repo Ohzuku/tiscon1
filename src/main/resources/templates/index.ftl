@@ -24,20 +24,58 @@
 
     <#assign count = 0>
 
-    <div align="center">
-        おすすめの映画
-    </div>
 
-     <#list movieRank as item>
-        <div class="item">
-            <div align="center">
-                <#if count == 0>
-                    <a><img src=${item.image}></a>
-                    <#assign count = 1>
-                </#if>
+    <!-- *** Ranking Top ***
+    _________________________________________________________ -->
+        <div id="advantages">
+
+            <div class="container">
+                <div class="same-height-row">
+                    <div class="col-sm-4">
+                        <div class="box same-height clickable">
+                             <p>おすすめの映画</p>
+                             <#list movieRank as item>
+                                <div class="item">
+                                    <div align="center">
+                                        <#if count == 0>
+                                            <a><img src=${item.image}></a>
+                                            <#assign count = 1>
+                                        </#if>
+                                    </div>
+                                </div>
+                             </#list>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="box same-height clickable">
+                            <p>おすすめの音楽</p>
+                            <#list musicRank as item>
+                                <div class="item">
+                                    <div align="center">
+                                        <#if count == 1>
+                                            <a><img src=${item.image}></a>
+                                        <#assign count = 2>
+                                        </#if>
+                                    </div>
+                                </div>
+                            </#list>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.row -->
+
             </div>
+            <!-- /.container -->
+
         </div>
-     </#list>
+        <!-- /#advantages -->
+
+        <!-- *** ADVANTAGES END *** -->
+
+
+
 
     <!-- *** ADVANTAGES HOMEPAGE ***
 _________________________________________________________ -->
