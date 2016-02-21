@@ -22,6 +22,23 @@
         </div>
     </div>
 
+    <#assign count = 0>
+
+    <div align="center">
+        おすすめの映画
+    </div>
+
+     <#list movieRank as item>
+        <div class="item">
+            <div align="center">
+                <#if count == 0>
+                    <a><img src=${item.image}></a>
+                    <#assign count = 1>
+                </#if>
+            </div>
+        </div>
+     </#list>
+
     <!-- *** ADVANTAGES HOMEPAGE ***
 _________________________________________________________ -->
     <div id="advantages">
