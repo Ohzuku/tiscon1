@@ -6,6 +6,21 @@
     height : 250px;
 }
 
+.img-rank {
+    height : 400px;
+    width : 300px;
+    margin-bottom: 20px;
+}
+
+.ranking-row {
+    margin-left: 60px;
+    width: 1500px;
+}
+
+.ranking-text {
+     font-size: 30px;
+ }
+
 .img-category-list {
     height : 250px;
 }
